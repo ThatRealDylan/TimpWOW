@@ -1,1 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimpWOW - Package Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        nav {
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            padding: 4rem 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: #ff6b6b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="downloads.html">Downloads</a></li>
+            <li><a href="docs.html">Documentation</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="https://github.com/ThatRealDylan/TimpWOW" target="_blank">GitHub</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <header>
+            <h1>TimpWOW</h1>
+            <p class="tagline">A Modern Python Package Manager</p>
+            <a href="downloads.html" class="cta-button">Get Started</a>
+        </header>
+        
+        <div class="features">
+            <div class="feature-card">
+                <div class="icon">📦</div>
+                <h3>Easy Installation</h3>
+                <p>Simple command to install packages. Just run <code>pkg install package-name</code> and you're done.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="icon">☁️</div>
+                <h3>GitHub Integration</h3>
+                <p>All packages are hosted on GitHub, making distribution and updates effortless.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="icon">⚡</div>
+                <h3>Fast & Lightweight</h3>
+                <p>Built with Python, TimpWOW is fast, lightweight, and requires minimal resources.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="icon">🔧</div>
+                <h3>Open Source</h3>
+                <p>Completely open source and community-driven. Contribute and help improve TimpWOW.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="icon">📝</div>
+                <h3>Easy Packaging</h3>
+                <p>Create packages using simple .timp files (renamed ZIP archives). Support for project files, plugins, and metadata.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="icon">🚀</div>
+                <h3>Extensible</h3>
+                <p>Build on top of TimpWOW with custom commands and integrations.</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 TimpWOW. Made by <a href="https://github.com/ThatRealDylan" target="_blank" style="color: #ff6b6b;">ThatRealDylan</a></p>
+    </footer>
+</body>
+</html>
 
