@@ -1,1 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service - TimpWOW</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        nav {
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        h1 {
+            color: white;
+            margin-bottom: 2rem;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-card h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: 600;
+        }
+        
+        .service-button:hover {
+            background-color: #764ba2;
+        }
+        
+        .status-page {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .status-page h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+        
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .status-item:last-child {
+            border-bottom: none;
+        }
+        
+        .status-item h3 {
+            color: #333;
+            margin-bottom: 0.25rem;
+        }
+        
+        .status-item p {
+            color: #999;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        .status-badge {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .status-online {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .status-maintenance {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        
+        .footer {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="downloads.html">Downloads</a></li>
+            <li><a href="docs.html">Documentation</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="https://github.com/ThatRealDylan/TimpWOW" target="_blank">GitHub</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h1>Service & Support</h1>
+        
+        <div class="service-grid">
+            <div class="service-card">
+                <h2>📖 Documentation</h2>
+                <p>Comprehensive guides and tutorials to help you get the most out of TimpWOW.</p>
+                <a href="docs.html" class="service-button">View Docs</a>
+            </div>
+            
+            <div class="service-card">
+                <h2>🐛 Issue Tracker</h2>
+                <p>Report bugs, request features, or discuss improvements on GitHub Issues.</p>
+                <a href="https://github.com/ThatRealDylan/TimpWOW/issues" class="service-button" target="_blank">Go to Issues</a>
+            </div>
+            
+            <div class="service-card">
+                <h2>💬 Discussions</h2>
+                <p>Join our community discussions to get help and share ideas.</p>
+                <a href="https://github.com/ThatRealDylan/TimpWOW/discussions" class="service-button" target="_blank">Discussions</a>
+            </div>
+        </div>
+        
+        <div class="status-page">
+            <h2>Service Status</h2>
+            
+            <div class="status-item">
+                <div>
+                    <h3>GitHub Repository</h3>
+                    <p>Package hosting and distribution</p>
+                </div>
+                <span class="status-badge status-online">● Online</span>
+            </div>
+            
+            <div class="status-item">
+                <div>
+                    <h3>GitHub API</h3>
+                    <p>Package listing and metadata</p>
+                </div>
+                <span class="status-badge status-online">● Online</span>
+            </div>
+            
+            <div class="status-item">
+                <div>
+                    <h3>Website</h3>
+                    <p>This documentation site</p>
+                </div>
+                <span class="status-badge status-online">● Online</span>
+            </div>
+        </div>
+        
+        <div class="service-grid">
+            <div class="service-card">
+                <h2>🔧 Getting Help</h2>
+                <p><strong>Can't find what you're looking for?</strong></p>
+                <ul style="color: #666; margin-left: 1rem; line-height: 1.8;">
+                    <li>Check the <a href="docs.html">Documentation</a> first</li>
+                    <li>Search existing <a href="https://github.com/ThatRealDylan/TimpWOW/issues" target="_blank">GitHub Issues</a></li>
+                    <li>Create a new issue with detailed information</li>
+                    <li>Join the <a href="https://github.com/ThatRealDylan/TimpWOW/discussions" target="_blank">Discussions</a></li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <h2>🚀 Contributing</h2>
+                <p><strong>Want to help improve TimpWOW?</strong></p>
+                <ul style="color: #666; margin-left: 1rem; line-height: 1.8;">
+                    <li>Fork the repository on GitHub</li>
+                    <li>Create a feature branch</li>
+                    <li>Make your changes</li>
+                    <li>Submit a pull request</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <h2>📦 Publishing Packages</h2>
+                <p><strong>Ready to share your package?</strong></p>
+                <ul style="color: #666; margin-left: 1rem; line-height: 1.8;">
+                    <li>Follow the <a href="docs.html">package creation guide</a></li>
+                    <li>Create a .timp file</li>
+                    <li>Add to your GitHub repo</li>
+                    <li>Share with the community!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>&copy; 2026 TimpWOW. Made by <a href="https://github.com/ThatRealDylan" target="_blank" style="color: #ff6b6b;">ThatRealDylan</a></p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+            <a href="https://github.com/ThatRealDylan/TimpWOW" target="_blank" style="color: inherit;">GitHub</a> | 
+            <a href="docs.html" style="color: inherit;">Documentation</a> | 
+            <a href="https://github.com/ThatRealDylan/TimpWOW/issues" target="_blank" style="color: inherit;">Support</a>
+        </p>
+    </div>
+</body>
+</html>
 
