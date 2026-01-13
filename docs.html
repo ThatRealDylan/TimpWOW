@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - TimpWOW</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        nav {
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        h1 {
+            color: white;
+            margin-bottom: 2rem;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .docs-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .docs-content h2 {
+            color: #667eea;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+        
+        .docs-content h2:first-child {
+            margin-top: 0;
+        }
+        
+        .docs-content h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .docs-content p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .docs-content ul, .docs-content ol {
+            color: #666;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .docs-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        code {
+            background-color: #f5f5f5;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+        
+        .code-block {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .command {
+            background-color: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+        
+        .command code {
+            color: #667eea;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        table th {
+            background-color: #667eea;
+            color: white;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        table td {
+            border-bottom: 1px solid #ddd;
+            padding: 0.75rem;
+        }
+        
+        table tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        footer {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="downloads.html">Downloads</a></li>
+            <li><a href="docs.html">Documentation</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="https://github.com/ThatRealDylan/TimpWOW" target="_blank">GitHub</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h1>Documentation</h1>
+        
+        <div class="docs-content">
+            <h2>Getting Started</h2>
+            <p>TimpWOW is a simple yet powerful Python-based package manager. Follow these steps to get started:</p>
+            
+            <h3>Installation</h3>
+            <ol>
+                <li>Download TimpWOW from the <a href="downloads.html">Downloads</a> page</li>
+                <li>Extract the archive to your desired location</li>
+                <li>Navigate to the directory in your terminal</li>
+                <li>Run: <code>python terminal.py</code></li>
+            </ol>
+            
+            <h2>Commands</h2>
+            <table>
+                <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><code>help</code></td>
+                    <td>Shows all available commands</td>
+                </tr>
+                <tr>
+                    <td><code>pkg install &lt;name&gt;</code></td>
+                    <td>Install a package</td>
+                </tr>
+                <tr>
+                    <td><code>pkg remove &lt;name&gt;</code></td>
+                    <td>Remove an installed package</td>
+                </tr>
+                <tr>
+                    <td><code>pkg list</code></td>
+                    <td>List installed and available packages</td>
+                </tr>
+                <tr>
+                    <td><code>pkg info &lt;name&gt;</code></td>
+                    <td>Show package information</td>
+                </tr>
+                <tr>
+                    <td><code>servers list</code></td>
+                    <td>Fetch available packages from GitHub</td>
+                </tr>
+                <tr>
+                    <td><code>servers fetch &lt;name&gt;</code></td>
+                    <td>Get detailed package info</td>
+                </tr>
+                <tr>
+                    <td><code>servers test</code></td>
+                    <td>Test connection to GitHub</td>
+                </tr>
+                <tr>
+                    <td><code>update</code></td>
+                    <td>Check for updates</td>
+                </tr>
+                <tr>
+                    <td><code>license</code></td>
+                    <td>Show MIT License</td>
+                </tr>
+            </table>
+            
+            <h2>Package Management</h2>
+            
+            <h3>Installing Packages</h3>
+            <p>To install a package, use the following command:</p>
+            <div class="command">
+                <code>pkg install package-name</code>
+            </div>
+            <p>The package manager will:</p>
+            <ol>
+                <li>Download the <code>.timp</code> file from GitHub</li>
+                <li>Extract it to the <code>pkg/extracted/</code> directory</li>
+                <li>Save the original file in <code>pkg/</code></li>
+            </ol>
+            
+            <h3>Package Structure</h3>
+            <p>.timp files are ZIP archives with the following structure:</p>
+            <div class="code-block">
+project/
+  - Your project files
+plugins/
+  - TimpWOW plugins
+props.json
+  - Package metadata
+            </div>
+            
+            <h2>Creating Your Own Packages</h2>
+            
+            <h3>Step 1: Create Directory Structure</h3>
+            <p>Create a folder with your package files:</p>
+            <div class="code-block">
+my-package/
+├── project/
+│   └── (your project files)
+├── plugins/
+│   └── (your plugins)
+└── props.json
+            </div>
+            
+            <h3>Step 2: Add Metadata</h3>
+            <p>Create a <code>props.json</code> file with package information:</p>
+            <div class="code-block">
+{
+  "name": "my-package",
+  "version": "1.0.0",
+  "author": "Your Name",
+  "description": "A great package",
+  "license": "MIT"
+}
+            </div>
+            
+            <h3>Step 3: Create .timp File</h3>
+            <p>Compress your folder as a ZIP file and rename it to <code>.timp</code>:</p>
+            <ol>
+                <li>Select all files in your package folder</li>
+                <li>Compress to ZIP</li>
+                <li>Rename the ZIP file to <code>my-package.timp</code></li>
+            </ol>
+            
+            <h3>Step 4: Upload to GitHub</h3>
+            <p>Add your <code>.timp</code> file to the root of your GitHub repository. Users can now install it with:</p>
+            <div class="command">
+                <code>pkg install my-package</code>
+            </div>
+            
+            <h2>Server Commands</h2>
+            
+            <h3>Check Server Status</h3>
+            <div class="command">
+                <code>servers status</code>
+            </div>
+            
+            <h3>Test Connection</h3>
+            <div class="command">
+                <code>servers test</code>
+            </div>
+            
+            <h3>Fetch Package Info</h3>
+            <div class="command">
+                <code>servers fetch package-name</code>
+            </div>
+            
+            <h3>List Available Packages</h3>
+            <div class="command">
+                <code>servers list</code>
+            </div>
+            
+            <h2>FAQ</h2>
+            
+            <h3>Where are my packages stored?</h3>
+            <p>Installed packages are stored in two locations:</p>
+            <ul>
+                <li><code>pkg/</code> - Original .timp files</li>
+                <li><code>pkg/extracted/</code> - Extracted package contents</li>
+            </ul>
+            
+            <h3>How do I update a package?</h3>
+            <p>Simply reinstall the package using <code>pkg install package-name</code>. The old files will be overwritten.</p>
+            
+            <h3>Can I create private packages?</h3>
+            <p>Yes! Use a private GitHub repository and configure TimpWOW to use your repository URL.</p>
+            
+            <h3>What if I need help?</h3>
+            <p>Visit the <a href="https://github.com/ThatRealDylan/TimpWOW">GitHub repository</a> to report issues or ask questions.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 TimpWOW. Made by <a href="https://github.com/ThatRealDylan" target="_blank" style="color: #ff6b6b;">ThatRealDylan</a></p>
+    </footer>
+</body>
+</html>
